@@ -1,4 +1,4 @@
 {
   console.log(x); // ❌ ReferenceError (TDZ)
-  let x = 5;
+  const x = 5;
 }
