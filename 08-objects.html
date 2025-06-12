@@ -1,0 +1,102 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Objects</title>
+</head>
+
+
+<body>
+    
+
+    <script>
+        const product =
+        {
+            name: 'socks',
+            price: 1090
+        };
+
+        console.log(product);
+        console.log(product.name);
+        console.log(product.price);
+
+        product.name='cotton socks';
+        console.log(product);
+
+
+        const product2={
+            name:'shirt',
+            'delivery-time':'1 day',
+            rating:{
+                stars:4.5,
+                count: 87
+            },
+            fun: function function1()
+            {
+                console.log('functionn inside function');
+            }
+        }
+
+        console.log(product2);
+        console.log(product2 .name);
+        console.log(product2['name']);
+        console.log(product2['delivery-time']);
+        console.log(product2.rating.count);
+        product2.fun();
+
+        console.log(JSON.stringify(product2));//covert all the data inside product2 into a string
+        const jsonString= JSON.stringify(product2);
+        console.log(JSON.parse(jsonString));//converts the JSON object to javaScript object
+
+
+        //Auto Boxing
+        console.log('hello'.length);
+        console.log('hello'.toUpperCase());
+
+
+        const object1= { 
+            message: 'hello'
+        };
+        const object2 = object1;//copy by reference
+        object1.message='good job';
+        console.log(object1);
+        console.log(object2);
+
+        //two objects cant be compared as they are not any value itself rather just points to the data assigned to it
+        const object3={
+            message: 'good job'
+        };
+        console.log(object3 === object1);
+
+        const object4={
+            message: 'good job',
+            price: 799
+        }
+        
+        const{message,price}= object4;//shortcut for const message= object4.message and const price= object4.price;
+        console.log(message);
+        console.log(price);
+
+
+        //shorthand property
+        const object5={
+            
+            message,  // shortcut for message: message
+            /* instaed of writing it this way, we can write it as below
+            method: function function2()
+            {
+                console.log('method')
+
+            }
+            */
+            method()
+            {
+                console.log('method');
+            }
+        };
+        console.log(object5);
+        object5.method();
+
+    </script>
+</body>
+</html>

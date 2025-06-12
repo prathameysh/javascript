@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body
+        {
+            font-family: Arial;
+        }
+
+        .todo-grid,
+        .todo-input-list
+        {
+            display: grid;
+            grid-template-columns: 200px 150px 100px;
+            column-gap: 10px;
+            row-gap: 10px;
+            align-items: center;
+        }
+
+        .todo-input-list
+        {
+            margin-bottom: 10px;
+            align-items: stretch;
+        }
+
+        .add-todo-button
+        {
+            color: white;
+            background-color: green;
+            font-size: 15px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .delete-todo-button
+        {
+            color: white;
+            background-color: darkred;
+            font-size: 15px;
+            cursor: pointer;
+            border: none;   
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .js-name-input,
+        .js-dueDate-input
+        {
+            font-size: 15px;
+            padding: 6px;
+
+        }
+
+    </style>
+
+    <title>todo-List</title>
+</head>
+
+
+<body>
+    <p>Todo List</p>
+
+
+    <div class="todo-input-list">
+        <input placeholder="Enter task" class="js-name-input" onkeydown="handleKeyDown()">
+    
+        <input type="date" class="js-dueDate-input">
+    
+        <button class="add-todo-button js-add-todo-button">Add</button>
+    </div>
+
+    <div class="js-todo-listdiv todo-grid"></div>
+
+    <script src="11-todo-list.js"></script>
+</body>
+</html>
