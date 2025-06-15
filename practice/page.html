@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cart Quantity Counter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .qty-box {
+      font-size: 24px;
+      margin: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      margin: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Cart Quantity</h1>
+
+  <div class="qty-box">
+    Quantity: <span id="quantityDisplay">1</span>
+  </div>
+
+  <button onclick="decreaseQty()">-</button>
+  <button onclick="increaseQty()">+</button>
+
+  <script>
+    let quantity = 1;
+
+    function updateDisplay() {
+      document.getElementById('quantityDisplay').textContent = quantity;
+    }
+
+    function increaseQty() {
+      quantity++;
+      updateDisplay();
+    }
+
+    function decreaseQty() {
+      if (quantity > 0) {
+        quantity--;
+        updateDisplay();
+      }
+    }
+
+    // Initial display
+    updateDisplay();
+  </script>
+
+</body>
+</html>
+
